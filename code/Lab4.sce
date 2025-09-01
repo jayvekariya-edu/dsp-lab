@@ -20,7 +20,7 @@ S_mag = abs(S)/(N/2);
 subplot(2,1,2)
 plot(f_axis(1:N/2),S_mag(1:N/2))
 xtitle("Frequency Representation","f","Amplitude");
-figure();
+show_window(1);
 
 //Cosine Wave (50 Hz)
 f2 = 50
@@ -38,7 +38,7 @@ C_mag = abs(C)/(N/2);
 subplot(2,1,2)
 plot(f_axis(1:N/2),C_mag(1:N/2))
 xtitle("Frequency Representation","f","Amplitude");
-figure();
+show_window(2);
 
 //Sum of Two Sine Waves (5 Hz & 30Hz)
 f3 = 5
@@ -56,7 +56,7 @@ A_mag = abs(A)/(N/2);
 subplot(2,1,2)
 plot(f_axis(1:N/2),A_mag(1:N/2))
 xtitle("Frequency Representation","f","Amplitude");
-figure();
+show_window(3);
 
 
 //Rectangular Wave
@@ -76,7 +76,7 @@ R_mag = abs(R)/(N/2);
 subplot(2,1,2)
 plot(f_axis(1:N/2),R_mag(1:N/2))
 xtitle("Frequency Representation","f","Amplitude");
-figure();
+show_window(4);
 
 
 //Gaussian Pulse
@@ -94,7 +94,7 @@ G_mag = abs(G)/(N/2);
 subplot(2,1,2)
 plot(f_axis(1:N/2),G_mag(1:N/2))
 xtitle("Frequency Representation","f","Amplitude");
-figure();
+show_window(5);
 
 //Exponential Damped
 ed = exp(-10*t).*sin(2*%pi*f1*t)
