@@ -4,7 +4,7 @@ l_x = length(x);
 l_h = length(h);
 l_y = l_x+l_h-1;
 
-x_range = 0:1:2;
+x_range = -1:1:1;
 h_range = 0:1:1;
 
 y = zeros(1,l_y);
