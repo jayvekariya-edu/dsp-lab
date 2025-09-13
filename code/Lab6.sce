@@ -1,9 +1,8 @@
 A =10 // Amplitude
 fm = 50 // Frequency of signal
-k = 10  //Number of Cycles
+k = 7  //Number of Cycles
 t = 0:0.0001:k/fm;  //Time Axis
 x = cos(2*%pi*fm*t); // Cos Wave
-s = sin(2*%pi*fm*t); // Cos Wave
 
 subplot(4,1,1);
 plot(t,x);
