@@ -1,24 +1,24 @@
-//Original Signal x
+//Signal x
 x = [1,2,1,1];
 l_x= length(x);
 x_range = 0:1:3;
 
 subplot(2,2,1);
 plot2d3(x_range,x);
-xtitle("Signal ","n","Amplitude");
+xtitle("Signal x","n","Amplitude");
 a = gca();
-a.data_bounds = [-3,-2;5,5]
+a.data_bounds = [-5,0;5,5]
 
-//Original Signal y
+//Signal y
 y = [1,2,3,4];
 l_y= length(y);
 y_range = 0:1:3;
 
 subplot(2,2,2);
 plot2d3(y_range,y);
-xtitle("Original Signal","n","Amplitude");
+xtitle("Signal y","n","Amplitude");
 a = gca();
-a.data_bounds = [-5,-2;5,5]
+a.data_bounds = [-5,0;5,5]
 
 
 //Fliped Signal x
@@ -33,7 +33,7 @@ subplot(2,2,3);
 plot2d3(x_f_range,x_fliped);
 xtitle("Flipped Signal x","n","Amplitude");
 a = gca();
-a.data_bounds = [-5,-2;5,5]
+a.data_bounds = [-5,0;5,5]
 
 
 //Fliped Signal y
@@ -48,7 +48,7 @@ subplot(2,2,4);
 plot2d3(y_f_range,y_fliped);
 xtitle("Flipped Signal y","n","Amplitude");
 a = gca();
-a.data_bounds = [-5,-2;5,5]
+a.data_bounds = [-5,0;5,5]
 
 show_window(1);
 //Cross correlation using convolution
@@ -60,17 +60,18 @@ l_rxy = length(rxy_range);
 //Rxy(n)
 subplot(2,2,1);
 plot2d3(rxy_range,Rxy);
-xtitle("Cross-correlation Signal(Rxy)","n","Amplitude");
+xtitle("Cross-correlation Signal (Rxy[l])","n","Amplitude");
 a = gca();
 a.data_bounds = [-5,0;5,13]
 
 //Rxy(-n)
 subplot(2,2,2);
 plot2d3(-rxy_range,Rxy);
-xtitle("Cross-correlation Signal(-Rxy)","n","Amplitude");
+xtitle("Cross-correlation Signal (Rxy[-l])","n","Amplitude");
 a = gca();
 a.data_bounds = [-5,0;5,13]
 
+printf("Rxy[l]")
 disp(Rxy);
 
 //-----------Ryx------------
@@ -81,15 +82,16 @@ l_ryx = length(ryx_range);
 //Ryx(n)
 subplot(2,2,3);
 plot2d3(ryx_range,Ryx);
-xtitle("Cross-correlation Signal(Ryx)","n","Amplitude");
+xtitle("Cross-correlation Signal (Ryx[l])","n","Amplitude");
 a = gca();
 a.data_bounds = [-5,0;5,13]
 
 //Rxy(-n)
 subplot(2,2,4);
 plot2d3(-ryx_range,Ryx);
-xtitle("Cross-correlation Signal(-Ryx)","n","Amplitude");
+xtitle("Cross-correlation Signal (Ryx[-l])","n","Amplitude");
 a = gca();
 a.data_bounds = [-5,0;5,13]
 
+printf("Ryx[l]")
 disp(Ryx);

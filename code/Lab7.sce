@@ -33,8 +33,8 @@ xtitle("Flipped Signal","n","Amplitude");
 a = gca();
 a.data_bounds = [-3,-2;3,5]
 
-//Auto correlation using convolution
-//-----------Rxy------------
+//Auto correlation using convol function
+//-----------Rxx------------
 Rxx = convol(x,x_fliped);
 rxx_range = min(x_range)+min(x_f_range):1:max(x_range)+max(x_f_range);
 l_rxx = length(rxx_range);
@@ -42,14 +42,14 @@ l_rxx = length(rxx_range);
 //Rxx(n)
 subplot(2,2,3);
 plot2d3(rxx_range,Rxx);
-xtitle("Autocorrelation Signal(Rxx)","n","Amplitude");
+xtitle("Autocorrelation Signal (Rxx[l])","n","Amplitude");
 a = gca();
 a.data_bounds = [-5,0;5,33]
 
 //Rxx(-n)
 subplot(2,2,4);
 plot2d3(-rxx_range,Rxx);
-xtitle("Autocorrelation Signal(-Rxx)","n","Amplitude");
+xtitle("Autocorrelation Signal (Rxx[-l])","n","Amplitude");
 a = gca();
 a.data_bounds = [-5,0;5,33]
 
