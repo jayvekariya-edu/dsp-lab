@@ -1,10 +1,10 @@
-//1
+//Signal-1
 x1_range = 0:0.1:1
 x1_len = length(x1_range)
 x1 = zeros(1,x1_len);
 x1(x1_range<=0.9 & x1_range>=0.3 ) = 1 
+//disp(x1)
 
-disp(x1)
 subplot(2,1,1)
 plot2d3(x1_range,x1)
 xtitle("Pulse Signal","n","Amplitude")
@@ -29,11 +29,13 @@ legend("DTFT")
 //disp(X1)
     
 show_window(1) 
-//2
-x2_range = 0:99
+
+//Signal-2
+a=0.5
+x2_range = 0:9
 x2_len = length(x2_range)
-x2 = (0.5)^(x2_range)
-disp(x2)
+x2 = (a)^(x2_range)
+//disp(x2)
 
 subplot(2,1,1)
 plot2d3(x2_range,x2)
@@ -48,7 +50,6 @@ for j=1:len_X2
     X2(j)=X2(j)+ x2(i)*%e^(-%i*w(j)*i)
     end 
 end
-
 
 subplot(2,1,2)
 plot(w,abs(X2))
